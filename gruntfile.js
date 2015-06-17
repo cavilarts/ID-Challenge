@@ -1,4 +1,5 @@
 "use strict";
+
 module.exports = function(grunt) {
     /*http://floatleft.com/notebook/testing-your-javascript-with-jasmine-and-grunt/*/
     grunt.initConfig({
@@ -22,13 +23,32 @@ module.exports = function(grunt) {
                     "template": 'custom.tmpl'
                 }
             }
+        },
+         "sass": {
+            "dist": {
+                "files": {
+                    'main.css': '*.scss'
+                }
+            }
+        },
+        "handlebars": {
+            files: [{
+                expand: true,
+                cwd: './foo/',
+                src: '*.handlebars',
+                dest: './foo/',
+                ext: '.html'
+            }],
+            "templateData": "./foo/*.json",
         }
-
     });
 
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
 
     grunt.registerTask('default', ['http-server']);
     grunt.registerTask('jasmine', ['jasmine']);
+    grunt.registerTask('sass', ['sass']);
 };
