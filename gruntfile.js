@@ -1,5 +1,4 @@
-"use strict";
-
+'use strict';
 module.exports = function(grunt) {
     /*http://floatleft.com/notebook/testing-your-javascript-with-jasmine-and-grunt/*/
     grunt.initConfig({

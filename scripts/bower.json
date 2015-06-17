@@ -21,6 +21,7 @@
     "backbone": "~1.2.1",
     "jquery": "~2.1.4",
     "marionette": "~2.4.1",
-    "jasmine": "~2.3.4"
+    "jasmine": "~2.3.4",
+    "backbone.localStorage": "~1.1.16"
   }
 }
