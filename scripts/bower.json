@@ -1,0 +1,25 @@
+{
+  "name": "IdChallenge",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cavilarts/ID-Challenge",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "ID-NCI"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.18",
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4",
+    "marionette": "~2.4.1"
+  }
+}
