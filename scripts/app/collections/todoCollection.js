@@ -51,7 +51,7 @@ define([
             });
 
             app.Todos = new TodoList();
-            debugger
+
         }
 
         return {

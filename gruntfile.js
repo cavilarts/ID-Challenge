@@ -1,5 +1,5 @@
-'use strict';
 module.exports = function(grunt) {
+    'use strict';
     /*http://floatleft.com/notebook/testing-your-javascript-with-jasmine-and-grunt/*/
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -18,9 +18,20 @@ module.exports = function(grunt) {
             "customTemplate": {
                 "src": 'scripts/app/**/*.js',
                 "options": {
-                    "specs": 'spec/*Spec.js',
-                    "template": 'custom.tmpl'
+                    "specs" : 'spec/**/*.js',
+                    "template": require('grunt-template-jasmine-requirejs'),
+                    "templateOptions": {
+                    "requireConfig": {
+                            "baseUrl": ''
+                        }
+                    }
                 }
+            }
+        },
+        "watch": {
+            "css": {
+                "files": '**/*.scss',
+                "tasks": ['sass']
             }
         },
          "sass": {
@@ -45,9 +56,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-compile-handlebars');
 
     grunt.registerTask('default', ['http-server']);
     grunt.registerTask('jasmine', ['jasmine']);
     grunt.registerTask('sass', ['sass']);
+    grunt.registerTask('watch',['watch']);
 };

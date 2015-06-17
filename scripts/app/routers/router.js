@@ -18,7 +18,7 @@ define([
         function init(){
             var app = todoModel.app || {},
                 Workspace;
-            debugger
+            
             Workspace = Backbone.Router.extend({
                 "routes":{
                     "*filter": "setFilter"

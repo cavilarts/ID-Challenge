@@ -19,7 +19,6 @@ define([
             ENTER_KEY = 13;
 
         function init(){
-            // appView.init();
             new app.AppView();
         }
 
