@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Digitas • Codechallenge</title>
+
+    <style type="text/css">
+        html, body, #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        .controls {
+            margin-top: 16px;
+            position: absolute;
+            border: 1px solid transparent;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            height: 32px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            bottom: 12px;
+            left: 12px;
+            width: 300px;
+        }
+
+        #pac-input {
+            background-color: #fff;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            margin-left: 12px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 400px;
+        }
+
+        #pac-input:focus {
+            border-color: #4d90fe;
+        }
+
+        .pac-container {
+            font-family: Roboto;
+        }
+
+        #type-selector {
+            color: #fff;
+            background-color: #4d90fe;
+            padding: 5px 11px 0px 11px;
+        }
+
+        #type-selector label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        #target {
+            width: 345px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="filter"></section>
+    <section id="map-canvas" data-lat="51.5022416" data-lng="-0.1300987" data-zoom="15"></section>
+
+    <script type="text/x-handlebars-template" id="filter-list-item">
+        <option value="{{name}}"> {{name}} </option>
+    </script>  
+
+    <script type="text/x-handlebars-template" id="crime-marker">
+        <div class="marker-content">
+            <p class="marker-title">{{category}}</p>
+            <p class="marker-description">{{street}}</p>
+        </div>
+    </script>  
+    <script src="scripts/bower_components/gmaps/google-maps-v3.js"></script>
+    <script data-main="scripts/mashup-config" src="scripts/bower_components/requirejs/require.js"></script>
+</body>
+</html>
