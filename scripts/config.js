@@ -11,7 +11,7 @@ requirejs.config({
         appView: 'app/views/appView',
         todoView: 'app/views/todoView',
         todoRouter: 'app/routers/router',
-        app: 'app/app'
+        app: 'app/app',
     }
 });
 

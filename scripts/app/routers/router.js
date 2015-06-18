@@ -3,17 +3,11 @@ define([
     'jquery',
     'backbone',
     'todoModel',
-    'todoCollection',
-    'todoView',
-    'appView',
     ], function(
         _,
         $,
         Backbone,
-        todoModel,
-        todoCollection,
-        todoView,
-        appView
+        todoModel
     ){
         function init(){
             var app = todoModel.app || {},
